@@ -1,6 +1,7 @@
 import Header from "../component/Header";
 import Image from "../component/Image";
 import Button from "../component/Button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,10 +36,12 @@ export default function Home() {
     <p className="text-center text-2xl text-gray-600 mt-4 px-30">
       Your generous support helps us continue our mission, to present the gospel to adults and children.
     </p>
+    <Link href="give" passHref>
     <Button
-      text="Support GHH"
+      text="Support God's Helping Hands"
       className="btn btn-outline btn-sm bg-blue-500 text-white px-10 py-8 rounded-xl mt-6"
     />
+    </Link>
   </div>
 </div>
     </>

@@ -1,6 +1,7 @@
 import Image from "./Image";
 import Button from "../component/Button";
 import LogOffAvatar from "../component/LogOffAvatar";
+import Link from "next/link";
 
 function Header() {
   const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -27,9 +28,9 @@ function Header() {
           />
           {/* Extend <a> elements further to the right */}
           <nav className="flex items-center space-x-6 ml-4">
-            <a href="#home" className="hover:text-gray-300 text-sm leading-6">
+            <Link href="/" className="hover:text-gray-300 text-sm leading-6">
               HOME
-            </a>
+            </Link>
             <a
               href="#about"
               className="hover:text-gray-300 text-sm leading-6"
