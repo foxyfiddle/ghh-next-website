@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-10 bg-[#FEFBF6] text-[#2C2C2C] w-full flex items-center justify-between py-4 px-4">
+      <div className="fixed top-0 left-0 right-0 z-10 bg-[#f5f5f5] text-[#2C2C2C] w-full flex items-center justify-between pt-5 px-5">
         <div className="w-full flex items-center">
           {/* Extend <h1> further to the left */}
           <Image
@@ -26,7 +26,7 @@ function Header() {
             className=""
           />
           {/* Extend <a> elements further to the right */}
-          <nav className="flex items-center space-x-3 ml-4">
+          <nav className="flex items-center space-x-6 ml-4">
             <a href="#home" className="hover:text-gray-300 text-sm leading-6">
               HOME
             </a>
