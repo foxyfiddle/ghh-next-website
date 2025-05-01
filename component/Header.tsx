@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-10 bg-[#f5f5f5] text-[#2C2C2C] w-full flex items-center justify-between pt-5 px-5">
+      <div className="fixed top-0 left-0 right-0 z-10 bg-[#f5f5f5] text-[#2C2C2C] w-full flex items-center justify-between py-5 px-5">
         <div className="w-full flex items-center">
           {/* Extend <h1> further to the left */}
           <Image
