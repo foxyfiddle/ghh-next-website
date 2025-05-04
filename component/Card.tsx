@@ -1,26 +1,20 @@
 interface CardProps {
   h2Text: string;
   pText: string;
-  buttonText: string;
   src: string;
   alt: string;
   div1ClassName?: string; // Optional additional CSS classes
   div2ClassName?: string; // Optional additional CSS classes
-  div3ClassName?: string; // Optional additional CSS classes
-  buttonClassName?: string; // Optional additional CSS classes
   h2ClassName?: string; // Optional additional CSS classes
 }
 
 function Card({
   h2Text,
   pText,
-  buttonText,
   src,
   alt,
   div1ClassName,
   div2ClassName,
-  div3ClassName,
-  buttonClassName,
   h2ClassName,
 }: CardProps) {
   return (
@@ -30,9 +24,6 @@ function Card({
         <h2 className={h2ClassName}>{h2Text}</h2>
         {/* Render pText with HTML */}
         <p dangerouslySetInnerHTML={{ __html: pText }} />
-      </div>
-      <div className={div3ClassName}>
-        <button className={buttonClassName}>{buttonText}</button>
       </div>
     </div>
   );
