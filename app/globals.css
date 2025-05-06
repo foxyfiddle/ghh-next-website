@@ -1,9 +1,19 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: false;
+  btn-accent: "var(--accent-color)";
+  btn-primary: "var(--primary-color)";
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #FEF9F2;
+  --secondary-color: #213448;
+  --secondary-color-light: #547792;
+  --accent-color: #328E6E;
 }
 
 @theme inline {
@@ -25,3 +35,4 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+

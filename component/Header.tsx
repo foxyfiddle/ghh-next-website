@@ -16,80 +16,72 @@ function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-10 bg-[#f5f5f5] text-[#2C2C2C] w-full flex items-center justify-between py-5 px-5">
+      <div className="fixed top-0 left-0 right-0 z-10 bg-[var(--primary-color)] text-[#2C2C2C] w-full flex items-center justify-between py-5 px-5">
         <div className="w-full flex items-center">
           {/* Extend <h1> further to the left */}
-          <Image
-            src="https://static.wixstatic.com/media/43e6bc_150e4ac637334ef7af6a98d99295829b~mv2_d_2955_1824_s_2.png/v1/fill/w_140,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GhhLogoReg.png"
-            alt=""
-            height={30}
-            width={50}
-            className=""
-          />
+          <Link href="/">
+            <Image
+              src="https://static.wixstatic.com/media/43e6bc_150e4ac637334ef7af6a98d99295829b~mv2_d_2955_1824_s_2.png/v1/fill/w_140,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GhhLogoReg.png"
+              alt=""
+              height={30}
+              width={50}
+              className=""
+            />
+          </Link>
           {/* Extend <a> elements further to the right */}
           <nav className="flex items-center space-x-6 ml-4">
-            <Link href="/" className="hover:text-gray-300 text-sm leading-6">
-              HOME
-            </Link>
             <a
               href="#about"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               ABOUT
             </a>
             <a
               href="#about"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               STAFF
             </a>
             <a
               href="#about"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               SCHEDULE
             </a>
             <a
               href="#about"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               RESOURCES
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               CONTACT
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               SUPPORT
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-300 text-sm leading-6"
-            >
-              STAFF
-            </a>
-            <a
-              href="#contact"
-              className="hover:text-gray-300 text-sm leading-6"
+              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
               MEDIA
             </a>
-            </nav>
-            </div>
-        <div className="flex items-center justify-end space-x-3">
-            <Button 
-            text="GIVE"
-            className="btn btn-outline btn-sm"
-            />
-          <LogOffAvatar />
-        </div>  
+          </nav>
         </div>
-      
+        <div className="flex items-center justify-end space-x-3">
+          <Button
+            text="GIVE"
+            className="btn btn-sm btn-outline border-[var(--accent-color)] text-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-[var(--primary-color)] hover:border-[var(--accent-color)] text-sm leading-6"
+          />
+          <LogOffAvatar />
+        </div>
+      </div>
     </>
   );
 }
