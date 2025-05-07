@@ -23,7 +23,7 @@ function Card({
     <div className={div1ClassName}>
       {/* Image Wrapper with Relative Positioning */}
       <div className="relative">
-        <img src={src} alt={alt} className="w-full rounded-t-lg" />
+        <img src={src} alt={alt} className="w-full rounded-lg" />
         {/* Overlay Text */}
         {overlayText && (
           <div className="absolute inset-0 flex items-center justify-center">

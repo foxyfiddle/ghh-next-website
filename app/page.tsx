@@ -3,6 +3,7 @@ import Image from "../component/Image";
 import Button from "../component/Button";
 import Link from "next/link";
 import Card from "../component/Card";
+import Footer from "../component/Footer";
 
 export default function Home() {
   return (
@@ -106,6 +107,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* About Content */}
       <div className="w-full relative pt-20 pb-20 px-5 bg-[var(--primary-color)] rounded-lg shadow-lg">
         <div className="overflow-hidden h-[595px] rounded-lg shadow-lg shadow-gray-300/50">
@@ -141,6 +143,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+      {/* Footer */}
+        <Footer />
+      </>
   );
 }
