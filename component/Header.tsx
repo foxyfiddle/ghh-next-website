@@ -32,51 +32,51 @@ function Header() {
           <nav className="flex items-center space-x-6 ml-4">
             <a
               href="#about"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              ABOUT
+              About
             </a>
             <a
               href="#about"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              STAFF
+              Staff
             </a>
             <a
               href="#about"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              SCHEDULE
+              Schedule
             </a>
             <a
               href="#about"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              RESOURCES
+              Resources
             </a>
             <a
               href="#contact"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              CONTACT
+              Contact
             </a>
             <a
               href="#contact"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              SUPPORT
+              Support
             </a>
             <a
               href="#contact"
-              className="text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
+              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              MEDIA
+              Media
             </a>
           </nav>
         </div>
         <div className="flex items-center justify-end space-x-3">
           <Button
-            text="GIVE"
+            text="Give"
             className="btn btn-sm btn-outline border-[var(--accent-color)] text-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-[var(--primary-color)] hover:border-[var(--accent-color)] text-sm leading-6"
           />
           <LogOffAvatar />
