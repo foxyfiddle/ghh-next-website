@@ -1,11 +1,30 @@
+"use client";
+
 import Header from "../component/Header";
 import Image from "../component/Image";
 import Button from "../component/Button";
 import Link from "next/link";
 import Card from "../component/Card";
 import Footer from "../component/Footer";
+import { use, useEffect, useState } from 'react';
+import { getState } from "../lib/getState"
+
+
 
 export default function Home() {
+
+  const [eventState, setEventState] = useState<any>(null); // adjust type as needed
+
+  useEffect(() => {
+    const fetchState = async () => {
+      const state = await getState();
+      console.log('Fetched eventState:', state); // ✅ will log actual data
+      setEventState(state);
+    };
+
+    fetchState();
+  }, []);
+  
   return (
     <>
       {/* Header Container */}
