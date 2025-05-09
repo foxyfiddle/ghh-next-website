@@ -8,10 +8,18 @@ import { getEventState } from "../lib/getEventState";
 import { getEventName } from "../lib/getEventName";
 import { getEventDate } from "../lib/getEventDate";
 import { getEventCity } from "../lib/getEventCity";
+import { getEventMonth } from "../lib/getEventMonth";
+import { getWrittenMonth } from "@/lib/getWrittenMonth";
 
 export default async function Home() {
+  // Fetch event data
   const eventName = await getEventName();
-  const eventDate = await getEventDate();
+  const { eventStartDate, eventEndDate } = await getEventDate();
+  const { eventStartMonth, eventEndMonth } = await getEventMonth();
+  const { writtenStartMonth, writtenEndMonth } = getWrittenMonth(
+    eventStartMonth ?? 0,
+    eventEndMonth ?? 0
+  );
   const eventState = await getEventState();
   const eventCity = await getEventCity();
 
@@ -68,9 +76,11 @@ export default async function Home() {
             <Link href="give" passHref>
               <Card
                 h2Text="Next Event"
-                pText={`${eventName || "Event Name Not Available"}<br /> ${
-                  eventDate || "May 3-5"
-                } | ${eventCity || "not available"}, ${eventState || "not available"}`}
+                pText={`${eventName || ""}<br /> ${writtenStartMonth || ""} ${
+                  eventStartDate || ""
+                } - ${writtenEndMonth || ""} ${eventEndDate || ""}<br />${
+                  eventCity || ""
+                }, ${eventState || ""}`}
                 src="assets/splotch-bg.png"
                 alt="Schedule Art"
                 div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6"

@@ -1,9 +1,9 @@
 // lib/getUsername.ts
 import { supabase } from "./supabaseClient";
 
-export const getEventDate = async (): Promise<{
-  eventStartDate: number | null;
-  eventEndDate: number | null;
+export const getEventMonth = async (): Promise<{
+  eventStartMonth: number | null;
+  eventEndMonth: number | null;
 }> => {
   const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
   const { data, error } = await supabase
@@ -15,14 +15,14 @@ export const getEventDate = async (): Promise<{
 
   if (error) {
     console.error("Error fetching event_date:", error.message);
-    return { eventStartDate: null, eventEndDate: null };
+    return { eventStartMonth: null, eventEndMonth: null };
   }
 
-  const eventStartDate = new Date(data?.[0]?.event_start_date).getUTCDate();
-  const eventEndDate = new Date(data?.[0]?.event_end_date).getUTCDate();
+  const eventStartMonth = new Date(data?.[0]?.event_start_date).getMonth() + 1; // Months are 0-indexed in JavaScript
+  const eventEndMonth = new Date(data?.[0]?.event_end_date).getMonth() + 1;
 
   return {
-    eventStartDate,
-    eventEndDate,
+    eventStartMonth,
+    eventEndMonth,
   };
 };
