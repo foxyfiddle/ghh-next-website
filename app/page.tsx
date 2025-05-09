@@ -1,60 +1,19 @@
-"use client";
-
 import Header from "../component/Header";
 import Image from "../component/Image";
 import Button from "../component/Button";
 import Link from "next/link";
 import Card from "../component/Card";
 import Footer from "../component/Footer";
-import { use, useEffect, useState } from "react";
 import { getEventState } from "../lib/getEventState";
 import { getEventName } from "../lib/getEventName";
 import { getEventDate } from "../lib/getEventDate";
 import { getEventCity } from "../lib/getEventCity";
 
-export default function Home() {
-  const [eventName, setEventName] = useState<string | null>(null);
-  const [eventDate, setEventDate] = useState<string | null>(null);
-  const [eventState, setEventState] = useState<string | null>(null);
-  const [eventCity, setEventCity] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchName = async () => {
-      const name = await getEventName();
-      console.log("Fetched event_name:", name);
-      setEventName(name);
-    };
-    fetchName();
-  }, []);
-
-  useEffect(() => {
-    const fetchDate = async () => {
-      const date = await getEventDate();
-      console.log("Fetched event_date:", date);
-      setEventDate(date ? date.toISOString() : null);
-    };
-    fetchDate();
-  }, []);
-
-  useEffect(() => {
-    const fetchCity = async () => {
-      const city = await getEventCity();
-      console.log("Fetched event_city:", city);
-      setEventCity(city);
-    };
-    fetchCity();
-  }, []);
-
-  useEffect(() => {
-    const fetchState = async () => {
-      const state = await getEventState();
-      console.log("Fetched event_state:", state);
-      setEventState(state);
-    };
-    fetchState();
-
-    
-  }, []);
+export default async function Home() {
+  const eventName = await getEventName();
+  const eventDate = await getEventDate();
+  const eventState = await getEventState();
+  const eventCity = await getEventCity();
 
   return (
     <>

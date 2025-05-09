@@ -6,8 +6,8 @@ export const getEventCity = async (): Promise<string | null> => {
   const { data, error } = await supabase
   .from('events')
   .select('event_city')
-  .gte('event_date', today)
-  .order('event_date', { ascending: true }) // soonest first
+  .gte('event_start_date', today)
+  .order('event_start_date', { ascending: true }) // soonest first
   .limit(1); // only one result
 
   if (error) {

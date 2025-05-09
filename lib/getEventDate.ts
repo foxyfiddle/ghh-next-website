@@ -5,9 +5,9 @@ export const getEventDate = async (): Promise<Date | null> => {
   const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
   const { data, error } = await supabase
   .from('events')
-  .select('event_date')
-  .gte('event_date', today)
-  .order('event_date', { ascending: true }) // soonest first
+  .select('event_start_date')
+  .gte('event_start_date', today)
+  .order('event_start_date', { ascending: true }) // soonest first
   .limit(1); // only one result
 
   if (error) {
@@ -15,5 +15,5 @@ export const getEventDate = async (): Promise<Date | null> => {
     return null
   }
 
-  return data?.[0]?.event_date ?? null
+  return data?.[0]?.event_start_date ?? null
 }
