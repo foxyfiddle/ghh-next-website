@@ -1,19 +1,19 @@
 // lib/getUsername.ts
 import { supabase } from './supabaseClient'
 
-export const getState = async (): Promise<string | null> => {
+export const getEventDate = async (): Promise<Date | null> => {
   const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
   const { data, error } = await supabase
   .from('events')
-  .select('event_state')
+  .select('event_date')
   .gte('event_date', today)
   .order('event_date', { ascending: true }) // soonest first
   .limit(1); // only one result
 
   if (error) {
-    console.error('Error fetching state:', error.message)
+    console.error('Error fetching event_date:', error.message)
     return null
   }
 
-  return data?.[0]?.event_state ?? null
+  return data?.[0]?.event_date ?? null
 }
