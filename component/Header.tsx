@@ -64,12 +64,6 @@ function Header() {
               href="#contact"
               className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
             >
-              Support
-            </a>
-            <a
-              href="#contact"
-              className="font-medium text-[var(--secondary-color)] hover:text-[var(--secondary-color-light)] text-sm leading-6"
-            >
               Media
             </a>
           </nav>
