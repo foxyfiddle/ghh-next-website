@@ -4,6 +4,7 @@ import Button from "../component/Button";
 import Link from "next/link";
 import Card from "../component/Card";
 import Footer from "../component/Footer";
+import Video from "../component/Video";
 import { getEventState } from "../lib/getEventState";
 import { getEventName } from "../lib/getEventName";
 import { getEventDate } from "../lib/getEventDate";
@@ -31,23 +32,15 @@ export default async function Home() {
       </div>
 
       {/* Image Container */}
-      <div className="w-full grid grid-rows-[auto] items-start justify-items-center min-h-screen gap-0 px-5 pt-19">
-        <Image
-          src="https://static.wixstatic.com/media/43e6bc_d9ede3cfb2f54354a6cb2f8b12d65cbb~mv2.png/v1/fill/w_1961,h_774,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design-6.png"
-          alt=""
-          className="w-full object-cover rounded-lg shadow-lg shadow-gray-300/50"
+      <div className="w-full grid grid-rows-[auto] items-start justify-items-center gap-0 px-5 pt-19">
+        <Video
+          src="/assets/website-video.mp4"
+          className="w-full h-[85vh] object-cover object-top rounded-lg shadow-lg shadow-gray-300/50"
         />
-
-        {/* Image Text Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="text-[var(--primary-color)] text-4xl font-bold drop-shadow-lg">
-            GOD'S MESSAGE. CREATIVE METHODS.
-          </h1>
-        </div>
       </div>
 
       {/* Hero Container */}
-      <div className="w-full bg-[var(--primary-color)] pt-15 pb-20 px-5 flex items-center justify-center">
+      <div className="w-full bg-[var(--primary-color)] pt-80 pb-20 px-5 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-center text-5xl font-semibold text-[var(--secondary-color)] px-30">
             We believe that the story of Jesus has the power to transform the
@@ -83,7 +76,7 @@ export default async function Home() {
                 }, ${eventState || ""}`}
                 src="assets/splotch-bg.png"
                 alt="Schedule Art"
-                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 h-[400px]"
+                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 min-h-[460px]"
                 div2ClassName="mt-4 text-[var(--secondary-color)]"
                 h2ClassName="text-xl font-semibold text-[var(--secondary-color)]"
                 overlayText="SCHEDULE"
@@ -95,9 +88,9 @@ export default async function Home() {
                 pText="Mount Everlast<br /> Exploring the life of Jesus"
                 src="assets/splotch-bg-2.png"
                 alt="Schedule Art"
-                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 h-[400px]"
-                div2ClassName="mt-4 text-gray-700"
-                h2ClassName="text-xl font-semibold text-black-"
+                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 min-h-[460px]"
+                div2ClassName="mt-4 text-[var(--secondary-color)]"
+                h2ClassName="text-xl font-semibold text-[var(--secondary-color)]"
                 overlayText="SERIES"
               />
             </Link>
@@ -107,22 +100,22 @@ export default async function Home() {
                 pText="Check out our latest updates and stories from the field."
                 src="assets/splotch-bg-3.png"
                 alt="Schedule Art"
-                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 h-[400px]"
-                div2ClassName="mt-4 text-gray-700"
-                h2ClassName="text-xl font-semibold text-black-"
+                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 min-h-[460px]"
+                div2ClassName="mt-4 text-[var(--secondary-color)]"
+                h2ClassName="text-xl font-semibold text-[var(--secondary-color)]"
                 overlayText="NEWS"
               />
             </Link>
             <Link href="give" passHref>
               <Card
-                h2Text="Podcast"
-                pText="Check out our podcast<br /> featuing: Steven and Lydia"
+                h2Text="Prayer Request"
+                pText="Submit a prayer request here - We'd love to pray for you!"
                 src="assets/splotch-bg-4.png"
                 alt="Schedule Art"
-                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 h-[400px]"
-                div2ClassName="mt-4 text-gray-700"
-                h2ClassName="text-xl font-semibold text-black-"
-                overlayText="MEDIA"
+                div1ClassName="bg-[var(--primary-color)] shadow-lg rounded-lg p-6 min-h-[460px]"
+                div2ClassName="mt-4 text-[var(--secondary-color)]"
+                h2ClassName="text-xl font-semibold text-[var(--secondary-color)]"
+                overlayText="PRAYER"
               />
             </Link>
           </div>
@@ -142,13 +135,13 @@ export default async function Home() {
         {/* About Overlay Text */}
         <div className="absolute top-0 left-0 w-full h-full flex items-start justify-end pr-10 pt-35">
           <div className="text-right space-y-4">
-            <h1 className="text-[var(--primary-color)] text-4xl font-bold drop-shadow-lg pl-160">
+            <h1 className="text-[var(--secondary-color)] text-4xl font-bold drop-shadow-lg pl-160">
               "GHH always come well prepared, and with energy to spare. Their
               stories are fresh, interesting, and tailored to the age group in
               attendance... Their love for Christ is evident in the way they
               serve people"
             </h1>
-            <p className="text-white text-2xl mt-4">
+            <p className="text-[var(--accent-color)] text-2xl mt-4">
               Paul Gardner | Director
               <br />
               Camp Barakel | Fairview, MI
@@ -157,7 +150,7 @@ export default async function Home() {
               <Link href="give" passHref>
                 <Button
                   text="About Us"
-                  className="btn btn-md btn-outline border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)] hover:border-[var(--accent-color)] text-sm leading-6"
+                  className="btn btn-md btn-outline border-[var(--accent-color)] text-[var(--accent-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)] hover:border-[var(--accent-color)] text-sm leading-6"
                 />
               </Link>
             </div>

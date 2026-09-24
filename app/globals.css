@@ -8,12 +8,12 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #1c637c;
   --foreground: #171717;
-  --primary-color: #FEF9F2;
-  --secondary-color: #213448;
+  --primary-color: #2ca2c3;
+  --secondary-color: #ffffff;
   --secondary-color-light: #547792;
-  --accent-color: #328E6E;
+  --accent-color: #f1d73f;
   font-family: var(--font-poppins), sans-serif;
 }
 
